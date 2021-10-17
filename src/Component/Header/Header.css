@@ -1,0 +1,52 @@
+.logo{
+    width: 12%;
+}
+.header{
+    border-bottom: 2px solid #F71943;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+}
+form button{
+    background: transparent;
+    font-weight: 400;
+    border: 2px solid #F71943;
+    padding: 3px 15px;
+    border-radius: 1rem;
+}
+.signUp{
+    background: #F71943;
+    color: whitesmoke;
+    transition: .5s all;
+}
+.login{
+    transition: .5s all;
+    margin: 0 16px 0 8px;
+}
+.login:hover{
+    background: #F71943;
+    color: whitesmoke;
+}
+.signUp:hover{
+    background:transparent;
+    color: black;
+}
+.pages a{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 16px;
+    margin: 5px 10px;
+    transition: .5s all;
+    border-radius: 5px;
+    border-bottom: 2px solid transparent;
+
+}
+.pages a:hover{
+    box-shadow: 0px 0px 12px 3px #eaeaea;
+    border-bottom: 2px solid red;
+}
+.pages .active{
+    border-bottom: 2px solid red;
+}
