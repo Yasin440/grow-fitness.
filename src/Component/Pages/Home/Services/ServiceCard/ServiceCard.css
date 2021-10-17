@@ -1,0 +1,21 @@
+.detailsBtn{
+    background-color: #F71943;
+}
+.serviceCard img{
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: .3s all;
+}
+.serviceCard .card{
+    border: navajowhite;
+    border-radius: 20px;
+    background-color: #fa939312;
+    transition: .5s all;
+}
+.serviceCard .card:hover{
+    box-shadow: 0 0 20px 3px #80808047;
+}
+.serviceCard .card:hover img{
+    padding: 4px;
+    border: 2px solid #F71943;
+}

@@ -1,0 +1,83 @@
+[
+    {
+        "_id": "614f57d6a48a734rfc0162fa9b",
+        "picture": "https://i.ibb.co/Y75pSNB/Yoga-services.png",
+        "name": "Fit with Yoga",
+        "details": "Yoga is a mind and body practice. Various styles of yoga combine physical postures, breathing techniques, and meditation or relaxation. Yoga is an ancient practice that may have originated in India. It involves movement, meditation, and breathing techniques to promote mental and physical well-being",
+        "duration": "4 month",
+        "price": "616.16",
+        "email": "esteshuber@ovolo.com"
+    },
+    {
+        "_id": "6134rf57d6416a4a02dc3505cd",
+        "picture": "https://i.ibb.co/M1M6z5R/Six-Pack-services.png",
+        "name": "Gain six Abs",
+        "details": "Everyone has abdominal muscles, or “abs.” For well-defined abs, most people will need to lose some body fat around the stomach and then build muscle. Both males and females can achieve well-defined abs, but genetic and hormonal factors can make it more challenging for females.",
+        "duration": "7 month",
+        "price": "554.93",
+        "email": "macdonalddyer@ovolo.com"
+    },
+    {
+        "_id": "614f57d6ec577f34rf27663c10",
+        "picture": "https://i.ibb.co/7yBF5nz/Buy-services.png",
+        "name": "Create your Own gym",
+        "details": " A gym - physical exercises and activities performed inside, often using equipment, especially when done as a subject at school. Gymnasium is a large room with equipment for exercising the body and increasing strength or a club where you can go to exercise and keep fit.",
+        "duration": "9 month",
+        "price": "797.14",
+        "email": "tysonpuckett@ovolo.com"
+    },
+    {
+        "_id": "614f34rfd6ff8c80ce60ea89bf",
+        "picture": "https://i.ibb.co/N6qfCkQ/Competition-services.png",
+        "name": "Body Competition",
+        "details": "Fitness and figure competition is a class of physique-exhibition events for women and men. While bearing a close resemblance to bodybuilding, its emphasis is on muscle definition, not size.",
+        "duration": "5 days",
+        "price": "823.77",
+        "email": "lawandaoneal@ovolo.com"
+    },
+    {
+        "_id": "614f57d6c625ba46b34rfb0645",
+        "picture": "https://i.ibb.co/p0MjJDM/Bodybuilder-services.png",
+        "name": "Full Body Building",
+        "details": "Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles (muscle building) by muscle hypertrophy for aesthetic purposes. It is distinct from similar activities such as because it focuses on physical appearance instead of strength.",
+        "duration": "22 month",
+        "price": "806.62",
+        "email": "sampsoncallahan@ovolo.com"
+    },
+    {
+        "_id": "614f57d659934rfa9fc3d03176",
+        "picture": "https://i.ibb.co/rQCJjGT/Full-services.png",
+        "name": "Lose Fat",
+        "details": "9 weight loss tips · Eat a high protein breakfast. Eating a high protein breakfast could help reduce cravings and calorie intake throughout the day. best way to lose your extra fat with help of us",
+        "duration": "1 year",
+        "price": "737.94",
+        "email": "shaunabuckner@ovolo.com"
+    },
+    {
+        "_id": "614f57d6757edf334rfe3da0dd",
+        "picture": "https://i.ibb.co/rKPtbzn/Leg-services.png",
+        "name": "grow Lag muscle",
+        "details": "Gastrocnemius in the lower leg also helps flex the knee, and sartorius, gracilis, and popliteal help flex and rotate the joint. Extension of the knee occurs primarily by the quadriceps femoral muscles—rectus fetors, vaster lateraling, vastly intermediate, and vasts medials.",
+        "duration": "8 month",
+        "price": "925.54",
+        "email": "barnettwooten@ovolo.com"
+    },
+    {
+        "_id": "614f57d61cd06ee7f42f34rf5c",
+        "picture": "https://i.ibb.co/mBm9zKY/Shoulder-services.png",
+        "name": "Shoulder Building",
+        "details": "The shoulder joint is the main joint of the shoulder. It is a ball and socket joint that allows the arm to rotate in a circular fashion or to hinge out and up away from the body.",
+        "duration": "10 month",
+        "price": "641.20",
+        "email": "henriettapearson@ovolo.com"
+    },
+    {
+        "_id": "614f34rfd6ff8c80ce60ea0u9bf",
+        "picture": "https://i.ibb.co/N6qfCkQ/Competition-services.png",
+        "name": "Top Body Growth",
+        "details": "Fitness and figure competition is a class of physique-exhibition events for women and men. While bearing a close resemblance to bodybuilding, its emphasis is on muscle definition, not size.",
+        "duration": "5 days",
+        "price": "823.77",
+        "email": "lawandaoneal@ovolo.com"
+    }
+]
