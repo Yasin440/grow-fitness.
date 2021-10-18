@@ -9,7 +9,7 @@ const Contact = () => {
                     <div className="title pt-5"><h1>How Can We Help?</h1></div>
                     <div>
                         <p className='text-light w-50 m-auto py-3'>If you’ve got a question, a comment or just want to talk more about your fitness goals
-                        leave us a message and we’ll be sure to get in touch.</p>
+                            leave us a message and we’ll be sure to get in touch.</p>
                     </div>
                 </div>
                 <div className='d-flex form'>
@@ -32,6 +32,9 @@ const Contact = () => {
                             <label>Message</label>
                             <textarea type="text" required />
                         </div>
+                        <form className="d-flex">
+                            <button className="submit"><i className="fa fa-paper-plane me-1"></i>Submit</button>
+                        </form>
                     </fieldset>
                 </div>
             </div>

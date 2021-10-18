@@ -4,7 +4,9 @@ import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import AboutUs from './Component/Pages/AboutUs/AboutUs';
 import Contact from './Component/Pages/Contact/Contact';
+import Details from './Component/Pages/Details/Details';
 import Home from './Component/Pages/Home/Home';
+import Login from './Component/Pages/Login/Login';
 import NotFound from './Component/Pages/NotFound/NotFound';
 
 function App() {
@@ -24,6 +26,12 @@ function App() {
           </Route>
           <Route path='/contact'>
             <Contact></Contact>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
+          </Route>
+          <Route path='/details/:_id'>
+            <Details></Details>
           </Route>
           <Route path='*'>
             <NotFound></NotFound>

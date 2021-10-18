@@ -16,9 +16,9 @@ const Footer = () => {
                             <p>Conditions</p>
                         </div>
                         <div className="col-md-6 d-flex justify-content-center social">
-                            <p><i class="fab fa-twitter"></i></p>
-                            <p><i class="fab fa-facebook"></i></p>
-                            <p><i class="fab fa-linkedin"></i></p>
+                            <p><i className="fab fa-twitter"></i></p>
+                            <p><i className="fab fa-facebook"></i></p>
+                            <p><i className="fab fa-linkedin"></i></p>
                         </div>
                     </div>
                 </div>

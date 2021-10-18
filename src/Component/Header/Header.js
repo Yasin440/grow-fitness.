@@ -12,13 +12,15 @@ const Header = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="pages navbar-nav me-auto mb-2 mb-lg-0">
-                            <NavLink to='/home'>Home</NavLink>
-                            <NavLink to='/home#services'>Services</NavLink>
-                            <NavLink to='/about'>About Us</NavLink>
-                            <NavLink to='/contact'>Contact Us</NavLink>
+                        <NavLink to='/home'>Home</NavLink>
+                        <NavLink to='/home#services'>Services</NavLink>
+                        <NavLink to='/about'>About Us</NavLink>
+                        <NavLink to='/contact'>Contact Us</NavLink>
                     </div>
                     <form className="d-flex">
-                        <button className="signUp">Sign Up</button>
+                        <NavLink to='/login'>
+                            <button className="login"><i className="fas fa-sign-in-alt me-1"></i>login</button>
+                        </NavLink>
                     </form>
                 </div>
             </div>

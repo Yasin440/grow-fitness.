@@ -18,3 +18,12 @@ fieldset label{
     border: 1px solid #F71943;
     background-color: transparent;
 }
+.submit{
+    background: #F71943;
+    color: whitesmoke;
+    transition: .5s all;
+}
+.submit:hover{
+    background:transparent;
+    color: black;
+}

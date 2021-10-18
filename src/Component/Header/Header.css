@@ -13,22 +13,14 @@ button{
     font-weight: 400;
     border: 2px solid #F71943;
     padding: 3px 15px;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
-.signUp{
+.signUp,.login{
     background: #F71943;
     color: whitesmoke;
     transition: .5s all;
 }
-.login{
-    transition: .5s all;
-    margin: 0 16px 0 8px;
-}
-.login:hover{
-    background: #F71943;
-    color: whitesmoke;
-}
-.signUp:hover{
+.signUp:hover,.login:hover{
     background:transparent;
     color: black;
 }

@@ -15,11 +15,11 @@ const Services = () => {
                 <h1 className='title'>Our Best Services</h1>
                 <p className="muted">Get our best services according your choice. Always try to get consolute with expats.</p>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-5 my-5">
+            <div className="row row-cols-1 row-cols-md-3 g-5 my-5">
                 {
                     services.map(service => <ServiceCard
-                    key={service._id}
-                    service={service}
+                        key={service._id}
+                        service={service}
                     ></ServiceCard>)
                 }
             </div>
