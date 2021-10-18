@@ -1,0 +1,30 @@
+.aboutTitle{
+    width: fit-content;
+    color: #F71943;
+}
+.aboutTitle:after {
+    content: "";
+    background: #F71943;
+    width: 3rem;
+    height: 2px;
+    display: inline-block;
+    margin-left: .8rem;
+    -webkit-transform: translateY(-.5rem);
+    transform: translateY(-.5rem);
+}
+.aboutImg{
+    position: relative;
+}
+.aboutImg2{
+    position: relative;
+    top: 90px;
+}
+.aboutImg3{
+    position: relative;
+    left: 130px;
+    top: 40px;
+    display: block;
+}
+.pColor{
+    color: #F71943;
+}

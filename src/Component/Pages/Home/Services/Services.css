@@ -1,0 +1,10 @@
+.title:after {
+    content: "";
+    background: #F71943;
+    width: 5rem;
+    height: 2px;
+    display: inline-block;
+    margin-left: .8rem;
+    -webkit-transform: translateY(-.5rem);
+    transform: translateY(-.5rem);
+}

@@ -13,7 +13,7 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="pages navbar-nav me-auto mb-2 mb-lg-0">
                             <NavLink to='/home'>Home</NavLink>
-                            <NavLink to='/services'>Services</NavLink>
+                            <NavLink to='/home#services'>Services</NavLink>
                             <NavLink to='/about'>About Us</NavLink>
                             <NavLink to='/contact'>Contact Us</NavLink>
                     </div>

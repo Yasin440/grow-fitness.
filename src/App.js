@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header';
 import AboutUs from './Component/Pages/AboutUs/AboutUs';
 import Contact from './Component/Pages/Contact/Contact';
@@ -15,7 +16,7 @@ function App() {
           <Route exact path='/'>
             <Home></Home>
           </Route>
-          <Route path='/home'>
+          <Route exact path='/home'>
             <Home></Home>
           </Route>
           <Route path='/about'>
@@ -28,6 +29,7 @@ function App() {
             <NotFound></NotFound>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );

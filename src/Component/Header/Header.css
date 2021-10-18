@@ -41,12 +41,13 @@ button{
     transition: .5s all;
     border-radius: 5px;
     border-bottom: 2px solid transparent;
+    width: fit-content;
 
 }
 .pages a:hover{
     box-shadow: 0px 0px 12px 3px #eaeaea;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #F71943;
 }
 .pages .active{
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #F71943;
 }
