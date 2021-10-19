@@ -9,9 +9,11 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
 
     const signInWithGoogle = () => {
+        setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -20,6 +22,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
@@ -30,18 +33,22 @@ const useFirebase = () => {
             else {
                 setUser({})
             }
+            setIsLoading(false);
         });
-        return ()=> unsubscribed;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        return () => unsubscribed;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
-            .then(() => { });
+            .then(() => { })
+            .finally(() => setIsLoading(false));
     }
     return {
         user,
         error,
+        isLoading,
         signInWithGoogle,
         logOut
     }

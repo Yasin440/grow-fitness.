@@ -7,6 +7,7 @@ import Contact from './Component/Pages/Contact/Contact';
 import Details from './Component/Pages/Details/Details';
 import Home from './Component/Pages/Home/Home';
 import Login from './Component/Pages/Login/Login';
+import PrivateRoute from './Component/Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Component/Pages/NotFound/NotFound';
 import SignUp from './Component/Pages/SignUp/SignUp';
 import AuthProvider from './context/AuthProvider';
@@ -36,9 +37,9 @@ function App() {
           <Route path='/register'>
             <SignUp></SignUp>
           </Route>
-          <Route path='/details/:_id'>
+          <PrivateRoute path='/details/:_id'>
             <Details></Details>
-          </Route>
+          </PrivateRoute>
           <Route path='*'>
             <NotFound></NotFound>
           </Route>
