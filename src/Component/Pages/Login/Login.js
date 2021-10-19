@@ -24,7 +24,7 @@ const Login = () => {
             <span className="text-danger"></span>
             <form className="row g-3 mt-5 w-50 m-auto">
                 <div className="col-md-12">
-                    <label htmlFor="inputEmail4" className="form-label">Email</label>
+                    <label  htmlFor="inputEmail4" className="form-label">Email</label>
                     <input type="email" className="form-control" id="inputEmail4" required />
                 </div>
                 <div className="col-md-12">

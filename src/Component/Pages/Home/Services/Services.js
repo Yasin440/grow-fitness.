@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import useAuth from '../../../../Hooks/useAuth';
 import ServiceCard from './ServiceCard/ServiceCard';
 import './Services.css';
 
 const Services = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-        fetch('./services.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+    const{services} = useAuth();
     return (
         <div id='services' className='container py-5'>
             <div className="serviceTitle text-center pt-4">
