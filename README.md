@@ -3,7 +3,12 @@
 This project was bootstrapped with [visit Grow Fitness](https://grow-fitness-b6c91.web.app).
 
 ## Available Advantage
-*One can build body with package
+* Used technology
+ * (HTML5, CSS, react.js, react-bootstrap,react-router,firebase.
+* One can build body with package.
+* User can use email or google to signUp.
+* One can check overview package without signUp
+* Have to create an account to get details.
 
 In the project directory, you can run:
 
