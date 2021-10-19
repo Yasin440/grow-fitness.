@@ -4,7 +4,7 @@ import useAuth from '../../../Hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-    const { signInWithGoogle } = useAuth();
+    const { error, handleGetEmail, handleGetPassword, signInWithGoogle, loginWithEmailPassword } = useAuth();
 
     //redirect user after login
     const location = useLocation();
@@ -21,18 +21,20 @@ const Login = () => {
             <div className="title text-center my-5">
                 <h1 >Please Login...</h1>
             </div>
-            <span className="text-danger"></span>
-            <form className="row g-3 mt-5 w-50 m-auto">
+            <form onSubmit={loginWithEmailPassword} className="row g-3 mt-5 w-50 m-auto">
+                <span className="text-danger">{error}</span>
                 <div className="col-md-12">
-                    <label  htmlFor="inputEmail4" className="form-label">Email</label>
-                    <input type="email" className="form-control" id="inputEmail4" required />
+                    <label htmlFor="inputEmail4" className="form-label">Email</label>
+                    <input onBlur={handleGetEmail} type="email" className="form-control" id="inputEmail4" required />
                 </div>
                 <div className="col-md-12">
                     <label htmlFor="inputPassword4" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="inputPassword4" required />
+                    <input onBlur={handleGetPassword} type="password" className="form-control" id="inputPassword4" required />
                 </div>
                 <div className="col-12">
-                    <button className='login me-3' type="submit">Login</button>
+                    <div>
+                        <button className='login me-3' type="submit">Log In</button>
+                    </div>
                 </div>
             </form>
             <div className='text-center'>

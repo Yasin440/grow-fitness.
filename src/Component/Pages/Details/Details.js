@@ -5,13 +5,13 @@ import './Details.css';
 const Details = () => {
     const { details_id } = useParams();
     const {services} = useAuth();
-    console.log(services);
-    services.map(service => console.log(service))
+    const getDetails =  services.filter(service =>service._id ===details_id );
+    console.log(getDetails);
     return (
         <div>
             <div className="container text-center mt-5"><h2>details of -id: {details_id}</h2></div>
             {
-                
+               
             }
         </div>
     );

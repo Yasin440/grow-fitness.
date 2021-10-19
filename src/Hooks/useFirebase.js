@@ -1,5 +1,5 @@
 import initializeAuthentication from "../Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 ;
@@ -33,17 +33,38 @@ const useFirebase = () => {
         setPassword(even.target.value)
     }
     //--------register
-    const handleRegistration=(even)=>{
+    const handleRegistration = (even) => {
+        even.preventDefault();
+        if (password.length < 6) {
+            setError('Password at list 6 character');
+            return;
+        }
         createUserWithEmailAndPassword(auth, email, password)
-        .then(result =>{
-            setUser(result.user);
-        })
-        .finally(() => setIsLoading(false));
+            .then(result => {
+                setUser(result.user);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false));
     }
     //------------------//
 
+    //login with email and password
+    const loginWithEmailPassword = () => {
+        // setIsLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+        // .finally(() => setIsLoading(false));
+    }
 
-    // sign in with google popup
+
+    // sign in || login with google popup
     const signInWithGoogle = () => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
@@ -90,6 +111,7 @@ const useFirebase = () => {
         handleGetPassword,
         handleRegistration,
         signInWithGoogle,
+        loginWithEmailPassword,
         logOut
     }
 }
