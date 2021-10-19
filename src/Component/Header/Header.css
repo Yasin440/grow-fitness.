@@ -8,6 +8,9 @@
     z-index: 10;
     background: white;
 }
+.header .user{
+    font-size: 12px;
+}
 button{
     background: transparent;
     font-weight: 400;
@@ -23,6 +26,9 @@ button{
 .signUp:hover,.login:hover{
     background:transparent;
     color: black;
+}
+a.nav-link {
+    color: black !important;
 }
 .pages a{
     color: black;

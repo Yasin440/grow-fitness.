@@ -10,8 +10,8 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div id='services' className='container my-5'>
-            <div className="serviceTitle text-center">
+        <div id='services' className='container py-5'>
+            <div className="serviceTitle text-center pt-4">
                 <h1 className='title'>Our Best Services</h1>
                 <p className="muted">Get our best services according your choice. Always try to get consolute with expats.</p>
             </div>

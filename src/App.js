@@ -8,10 +8,13 @@ import Details from './Component/Pages/Details/Details';
 import Home from './Component/Pages/Home/Home';
 import Login from './Component/Pages/Login/Login';
 import NotFound from './Component/Pages/NotFound/NotFound';
+import SignUp from './Component/Pages/SignUp/SignUp';
+import AuthProvider from './context/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <Header></Header>
         <Switch>
@@ -30,6 +33,9 @@ function App() {
           <Route path='/login'>
             <Login></Login>
           </Route>
+          <Route path='/register'>
+            <SignUp></SignUp>
+          </Route>
           <Route path='/details/:_id'>
             <Details></Details>
           </Route>
@@ -39,6 +45,7 @@ function App() {
         </Switch>
         <Footer></Footer>
       </Router>
+      </AuthProvider>
     </div>
   );
 }
