@@ -11,14 +11,14 @@ const useFirebase = () => {
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
-
+    
+    // sign in with google popup
     const signInWithGoogle = () => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-            })
+        // return for redirect user after login
+        return signInWithPopup(auth, googleProvider)
+
             .catch(error => {
                 setError(error.message);
             })
