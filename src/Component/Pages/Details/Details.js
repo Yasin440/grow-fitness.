@@ -2,10 +2,10 @@ import { useParams } from 'react-router';
 import './Details.css';
 
 const Details = () => {
-    const { _id } = useParams();
+    const { details_id } = useParams();
     return (
         <div>
-            <p>id{_id}</p>
+            <p>id{details_id}</p>
         </div>
     );
 };

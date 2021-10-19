@@ -37,7 +37,7 @@ function App() {
           <Route path='/register'>
             <SignUp></SignUp>
           </Route>
-          <PrivateRoute path='/details/:_id'>
+          <PrivateRoute path='/details/:details_id'>
             <Details></Details>
           </PrivateRoute>
           <Route path='*'>
