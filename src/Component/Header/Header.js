@@ -32,14 +32,9 @@ const Header = () => {
                                     <button onClick={logOut} className="login"><i className="fas fa-sign-in-alt me-1"></i>logOut</button>
                                 </NavLink>
                                 :
-                                <>
-                                    <NavLink to='/login'>
-                                        <button className="login"><i className="fas fa-sign-in-alt me-1"></i>login</button>
-                                    </NavLink>
-                                    <NavLink to='/register'>
-                                        <button className="login ms-2">Register</button>
-                                    </NavLink>
-                                </>
+                                <NavLink to='/login'>
+                                    <button className="login"><i className="fas fa-sign-in-alt me-1"></i>login</button>
+                                </NavLink>
                         }
 
                     </form>

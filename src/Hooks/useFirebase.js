@@ -26,11 +26,13 @@ const useFirebase = () => {
 
     // get email and password
     const handleGetEmail = even => {
-        setEmail(even.target.value)
+        setEmail(even.target.value);
+        console.log(even.target.value);
     }
 
     const handleGetPassword = even => {
         setPassword(even.target.value)
+        console.log(even.target.value);
     }
     //--------register
     const handleRegistration = (even) => {
@@ -53,9 +55,9 @@ const useFirebase = () => {
     //login with email and password
     const loginWithEmailPassword = () => {
         // setIsLoading(true);
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                console.log(result.user);
+                console.log('clicked222');
             })
             .catch(error => {
                 setError(error.message);

@@ -1,12 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
 
 const SignUp = () => {
-    const { user, error, handleGetEmail, handleGetPassword, handleRegistration } = useAuth();
+    const { user, error, handleGetEmail,signInWithGoogle, handleGetPassword, handleRegistration } = useAuth();
+    //redirect user after login
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home';
+
+    //redirect after sign in or login with google
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+            .then(result => {
+                history.push(redirect_url);
+            })
+    }
     return (
         <div className='container'>
-            <div className="title text-center my-5">
+            <div className="title text-center">
+            <img className='my-3' src="https://i.ibb.co/rb8w8Lj/Fitness-logo.png" alt="logo" />
                 <h1 >Please Register...</h1>
             </div>
             {
@@ -20,7 +34,7 @@ const SignUp = () => {
                     </div>
                 </>
             }
-            <form onSubmit={handleRegistration} className="row g-3 mt-5 w-50 m-auto">
+            <form onSubmit={handleRegistration} className="row g-3 w-50 m-auto">
                 <span className="text-danger">{error}</span>
                 <div className="col-md-12">
                     <label htmlFor="inputEmail4" className="form-label">Email</label>
@@ -35,6 +49,10 @@ const SignUp = () => {
                         <button className='login me-3' type="submit">Register</button>
                     </div>
                 </div>
+                <div className='text-center mt-4'>
+                <div><h5>--------OR--------</h5></div>
+                <button onClick={handleSignInWithGoogle} className='signUp mt-1'>Login with google</button>
+            </div>
             </form>
         </div>
     );
