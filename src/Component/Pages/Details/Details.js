@@ -1,4 +1,5 @@
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Details.css';
 
@@ -20,6 +21,9 @@ const Details = () => {
                         <h6 className="card-title py-1">{detail?.duration}</h6>
                         <h6 className="card-title py-1">{detail?.price}</h6>
                         <p className="card-text text-muted w-75">{detail?.details}</p>
+                        <Link to='/home'>
+                            <button><i className="fas fa-arrow-left pe-1"></i>Back To Home</button>
+                        </Link>
                     </div>
                 </div>
             </div>
