@@ -12,6 +12,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [isLogin, setIsLogin] = useState(false);
     const auth = getAuth();
 
     //Load fake json data
@@ -23,6 +24,9 @@ const useFirebase = () => {
     }, [])
     //-------------------// 
 
+    const toggleLoginAndOut = even => {
+        setIsLogin(even.target.checked);
+    }
     // get email and password
     const handleGetEmail = even => {
         setEmail(even.target.value);
@@ -39,6 +43,11 @@ const useFirebase = () => {
             setError('Password at list 6 character');
             return;
         }
+        isLogin ? loginUser(email, password) : createUser(email, password)
+    }
+
+    //------------------//
+    const createUser = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user);
@@ -48,10 +57,8 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
-    //------------------//
-
     //login with email and password
-    const loginWithEmailPassword = () => {
+    const loginUser = (email, password) => {
         // setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
@@ -61,7 +68,9 @@ const useFirebase = () => {
                 setError(error.message);
             })
         // .finally(() => setIsLoading(false));
+
     }
+
     //------------------//
 
     // sign in || login with google popup
@@ -108,13 +117,14 @@ const useFirebase = () => {
         error,
         services,
         isLoading,
+        isLogin,
         email,
         password,
+        toggleLoginAndOut,
         handleGetEmail,
         handleGetPassword,
         handleRegistration,
         signInWithGoogle,
-        loginWithEmailPassword,
         logOut
     }
 }
