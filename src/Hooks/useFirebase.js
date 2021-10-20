@@ -23,18 +23,18 @@ const useFirebase = () => {
     }, [])
     //-------------------// 
 
-
     // get email and password
     const handleGetEmail = even => {
         setEmail(even.target.value);
         console.log(even.target.value);
     }
-
     const handleGetPassword = even => {
         setPassword(even.target.value)
         console.log(even.target.value);
     }
-    //--------register
+    //-------------------//
+
+    //Create new user using email/password
     const handleRegistration = (even) => {
         even.preventDefault();
         if (password.length < 6) {
@@ -64,7 +64,7 @@ const useFirebase = () => {
             })
         // .finally(() => setIsLoading(false));
     }
-
+    //------------------//
 
     // sign in || login with google popup
     const signInWithGoogle = () => {
@@ -80,7 +80,6 @@ const useFirebase = () => {
     }
     //---------------------//
 
-
     // subscribe for user state change on browser
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
@@ -95,13 +94,17 @@ const useFirebase = () => {
         return () => unsubscribed;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+    //---------------------//
 
+    //User can LogOut
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => { })
             .finally(() => setIsLoading(false));
     }
+    //---------------------//
+
     return {
         user,
         error,

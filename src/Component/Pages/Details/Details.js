@@ -9,17 +9,17 @@ const Details = () => {
     const detail = getDetails[0];
     // console.log(detail);
     return (
-        <div className='container m-auto my-5'>
+        <div className='serviceDetails container m-auto my-5'>
             <div className="serviceCard py-2">
                 <div className="d-flex align-items-center">
                     <div className='p-3'>
-                        <img src={detail?.picture} className="card-img-top" alt="img" />
+                        <img src={detail?.picture} alt="img" />
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">{detail?.name}</h5>
-                        <h6 className="card-title">{detail?.email}</h6>
-                        <h6 className="card-title">{detail?.duration}</h6>
-                        <h6 className="card-title">{detail?.price}</h6>
+                        <h1 className="card-title pb-4 title">{detail?.name}</h1>
+                        <h6 className="card-title py-1">{detail?.email}</h6>
+                        <h6 className="card-title py-1">{detail?.duration}</h6>
+                        <h6 className="card-title py-1">{detail?.price}</h6>
                         <p className="card-text text-muted w-75">{detail?.details}</p>
                     </div>
                 </div>
