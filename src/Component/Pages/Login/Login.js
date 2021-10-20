@@ -12,7 +12,7 @@ const Login = () => {
     const history = useHistory();
     const redirect_url = location.state?.from || '/home';
 
-    //redirect after signin or login with google
+    //redirect after sign in or login with google
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
             .then(result => {
@@ -20,23 +20,13 @@ const Login = () => {
             })
     }
 
-    //redirect after login with email and password..
-    const handleLoginWithEmailPassword = () => {
-        loginWithEmailPassword()
-            .then(result => {
-                history.push(redirect_url);
-            })
-            .then(result => {
-                console.log('clicked');
-            })
-    }
     return (
         <div className='container'>
             <div className="title text-center">
                 <img className='my-3' src="https://i.ibb.co/rb8w8Lj/Fitness-logo.png" alt="logo" />
                 <h1 >Please Login...</h1>
             </div>
-            <form onSubmit={handleLoginWithEmailPassword} className="row g-3 w-50 m-auto">
+            <form onSubmit={loginWithEmailPassword} className="row g-3 w-50 m-auto">
                 <span className="text-danger">{error}</span>
                 <div className="col-md-12">
                     <label htmlFor="inputEmail4" className="form-label">Email</label>

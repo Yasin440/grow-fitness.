@@ -25,14 +25,14 @@ const SignUp = () => {
             </div>
             {
                 user.email &&
-                <>
+                <div className='my-2'>
                     <h4 className='text-success text-center'>Successfully Registration</h4>
                     <div className='text-center'>
                         <Link to='/home'>
                             <button><i className="fas fa-arrow-left pe-1"></i>Back To Home</button>
                         </Link>
                     </div>
-                </>
+                </div>
             }
             <form onSubmit={handleRegistration} className="row g-3 w-50 m-auto">
                 <span className="text-danger">{error}</span>
