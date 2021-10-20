@@ -18,8 +18,8 @@ const Details = () => {
                     <div className="card-body">
                         <h1 className="card-title pb-4 title">{detail?.name}</h1>
                         <h6 className="card-title py-1">{detail?.email}</h6>
-                        <h6 className="card-title py-1">{detail?.duration}</h6>
-                        <h6 className="card-title py-1">{detail?.price}</h6>
+                        <h6 className="card-title py-1">Duration: {detail?.duration}</h6>
+                        <h6 className="card-title py-1">Price: ${detail?.price}</h6>
                         <p className="card-text text-muted w-75">{detail?.details}</p>
                         <Link to='/home'>
                             <button><i className="fas fa-arrow-left pe-1"></i>Back To Home</button>
