@@ -7,7 +7,6 @@ const Details = () => {
     const { services } = useAuth();
     const getDetails = services.filter(service => service._id === details_id);
     const detail = getDetails[0];
-    // console.log(detail);
     return (
         <div className='serviceDetails container m-auto my-5'>
             <div className="serviceCard py-2">

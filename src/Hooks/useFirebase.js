@@ -26,11 +26,9 @@ const useFirebase = () => {
     // get email and password
     const handleGetEmail = even => {
         setEmail(even.target.value);
-        console.log(even.target.value);
     }
     const handleGetPassword = even => {
         setPassword(even.target.value)
-        console.log(even.target.value);
     }
     //-------------------//
 
