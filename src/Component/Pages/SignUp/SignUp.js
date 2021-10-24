@@ -46,16 +46,20 @@ const SignUp = () => {
                 </div>
                 <div className="col-12 d-flex align-items-center">
                     <div>
-                        <button className='login me-3' type="submit">{isLogin ? 'Login' : 'Register'}</button>
+                        {isLogin ?
+                            <button className='login me-3' type="submit"><i className="fas fa-sign-in-alt me-1"></i>Login</button>
+                            :
+                            <button className='login me-3' type="submit"><i className="fas fa-user-plus me-1"></i>Register</button>
+                        }
                     </div>
-                    <div class="form-check">
-                        <input onChange={toggleLoginAndOut} type="checkbox" class="form-check-input" id="exampleCheck1" />
-                        <label class="form-check-label" htmlFor="exampleCheck1">Have an account?</label>
+                    <div className="form-check">
+                        <input onChange={toggleLoginAndOut} type="checkbox" className="form-check-input" id="exampleCheck1" />
+                        <label className="form-check-label" htmlFor="exampleCheck1">Have an account?</label>
                     </div>
                 </div>
                 <div className='text-center mt-4'>
                     <div><h5>--------OR--------</h5></div>
-                    <button onClick={handleSignInWithGoogle} className='signUp mt-1'>Login with google</button>
+                    <button onClick={handleSignInWithGoogle} className='signUp mt-1'><i className="fab fa-google-plus-g me-1"></i>Login with google</button>
                 </div>
             </form>
         </div>

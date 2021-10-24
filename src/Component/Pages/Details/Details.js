@@ -11,11 +11,11 @@ const Details = () => {
     return (
         <div className='serviceDetails container m-auto my-5'>
             <div className="serviceCard py-2">
-                <div className="d-flex align-items-center">
-                    <div className='p-3'>
+                <div className="d-flex align-items-center row">
+                    <div className='p-3 col-md-6'>
                         <img src={detail?.picture} alt="img" />
                     </div>
-                    <div className="card-body">
+                    <div className="card-body col-md-6">
                         <h1 className="card-title pb-4 title">{detail?.name}</h1>
                         <h6 className="card-title py-1">{detail?.email}</h6>
                         <h6 className="card-title py-1">Duration: {detail?.duration}</h6>

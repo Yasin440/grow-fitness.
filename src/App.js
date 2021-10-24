@@ -6,7 +6,6 @@ import AboutUs from './Component/Pages/AboutUs/AboutUs';
 import Contact from './Component/Pages/Contact/Contact';
 import Details from './Component/Pages/Details/Details';
 import Home from './Component/Pages/Home/Home';
-import Login from './Component/Pages/Login/Login';
 import PrivateRoute from './Component/Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Component/Pages/NotFound/NotFound';
 import SignUp from './Component/Pages/SignUp/SignUp';
@@ -31,9 +30,6 @@ function App() {
           <PrivateRoute path='/contact'>
             <Contact></Contact>
           </PrivateRoute>
-          <Route path='/login'>
-            <Login></Login>
-          </Route>
           <Route path='/register'>
             <SignUp></SignUp>
           </Route>

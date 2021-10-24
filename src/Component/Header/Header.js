@@ -28,15 +28,14 @@ const Header = () => {
                         </small>
                         {
                             user?.email ?
-                                <NavLink to='/login'>
-                                    <button onClick={logOut} className="login"><i className="fas fa-sign-in-alt me-1"></i>logOut</button>
+                                <NavLink to='/register'>
+                                    <button onClick={logOut} className="login"><i className="fas fa-sign-out-alt me-1"></i>logOut</button>
                                 </NavLink>
                                 :
                                 <NavLink to='/register'>
-                                    <button className="login"><i className="fas fa-sign-in-alt me-1"></i>Register</button>
+                                    <button className="login"><i className="fas fa-user-plus me-1"></i>Register</button>
                                 </NavLink>
                         }
-
                     </form>
                 </div>
             </div>
